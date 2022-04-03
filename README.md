@@ -6,6 +6,8 @@ The goal of the project is to create an unsupervised clustering software that ca
 
 YouTube API is used to extract information relevant to users in a particular domain post which  data processing, NLP tools (TF-IDF, N-grams) and clustering modules are applied to generate insightful wordclouds
 
+The final results and graphs and insights are present in the Report document.
+
 ## BUILT WITH / MODULES USED
 
 Built with Python 3.7. Modules used:
