@@ -18,7 +18,6 @@ Built with Python 3.7. Modules used:
  - TF-IDF
  - Silhouette_Score
  - Elbow_Curve
- - 
 
 ## SUMMARIZED WORKFLOW
 
@@ -28,6 +27,7 @@ Built with Python 3.7. Modules used:
 - Pull the list of videos belonging to these playlists
 - Pull the ‘tags’ belonging to each video (YouTube has tags for each video)
 - Use NLP techniques to clean these tags followed by K-means in order to cluster the users based on their preferences (‘tags’)
+
 
 ## DETAILS AND RESULTS
 
