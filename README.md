@@ -34,17 +34,17 @@ Built with Python 3.7. Modules used:
 - We decided to look for a list of videos specific to a certain domain. We found such a data set on Kaggle which had 2607 video ID’s from various categories such as science, food, history etc. For our use case, we decided to choose ‘Travel’ as the dataset had the most videos (559) from this category
 - Post this we followed the rest of the steps in 'Summarized Workflow' as mentioned above
 
-- Following is the Elbow Curve we got on running our model 
+- Following is the Elbow Curve we got on running our model: 
 
-<img width="268" alt="image" src="https://user-images.githubusercontent.com/69982245/172291120-c2f2efe6-2c8c-40ee-a33d-1e424b2c6e49.png">
+  <img width="268" alt="image" src="https://user-images.githubusercontent.com/69982245/172291120-c2f2efe6-2c8c-40ee-a33d-1e424b2c6e49.png">
 
 - It is clear that the optimum number of clusters are 3. As such we ran KMeans with 3 clusters and plotted our clustered users using matplotlib
 
-<img width="274" alt="image" src="https://user-images.githubusercontent.com/69982245/172291203-cffa9c6c-551c-473b-b28b-838e66ae0b26.png">
+  <img width="274" alt="image" src="https://user-images.githubusercontent.com/69982245/172291203-cffa9c6c-551c-473b-b28b-838e66ae0b26.png">
 
 - As one can see, the clusters are very well defined and separable. Based on this, we created wordclouds for each segment based off their video 'tags'. Following are the 3 wordclouds:
 
-<img width="213" alt="image" src="https://user-images.githubusercontent.com/69982245/172291357-e8795d75-6ce3-464f-9b88-5edfbadb51ee.png">. <img width="213" alt="image" src="https://user-images.githubusercontent.com/69982245/172291370-4fe0e8af-0a8b-477f-9d69-df61e70a07f3.png">. <img width="214" alt="image" src="https://user-images.githubusercontent.com/69982245/172291378-74493106-72a0-4a1f-acad-c7390db8cdd3.png">
+  <img width="213" alt="image" src="https://user-images.githubusercontent.com/69982245/172291357-e8795d75-6ce3-464f-9b88-5edfbadb51ee.png">. <img width="213" alt="image" src="https://user-images.githubusercontent.com/69982245/172291370-4fe0e8af-0a8b-477f-9d69-df61e70a07f3.png">. <img width="214" alt="image" src="https://user-images.githubusercontent.com/69982245/172291378-74493106-72a0-4a1f-acad-c7390db8cdd3.png">
 
 - A close look at the wordclouds tells us that the 1st segmented group is interested in videos around travel, tourism, adventures and similar things. The 2nd segmented group in music-related videos. The 3rd segment is interested in gaming and tutorial-based videos predominantly.
 
