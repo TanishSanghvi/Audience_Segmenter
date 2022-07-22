@@ -24,8 +24,9 @@ Built with Python 3.7. Modules used:
 
 ## SUMMARIZED WORKFLOW
 
-- Enter a developer key from the following list to authenticate the YouTube API - ['AIzaSyAuo70sj6mxFGfpfKK-kj5vA4YPBwa7cZM', 'AIzaSyBz0rStW1NDfHjzyBKOCFud7RS0sfqEs04', 
-                         'AIzaSyBo1YHUZrL1Rt_KYvR6s1sTDqnX394Zd50', 'AIzaSyDIs7gvKx6NnqWUjXB8JfAf3hrCsAZti3o']
+- Enter a developer key from the following list to authenticate the YouTube API
+   - List of developer keys [AIzaSyAuo70sj6mxFGfpfKK-kj5vA4YPBwa7cZM, AIzaSyBz0rStW1NDfHjzyBKOCFud7RS0sfqEs04, 
+                         AIzaSyBo1YHUZrL1Rt_KYvR6s1sTDqnX394Zd50, AIzaSyDIs7gvKx6NnqWUjXB8JfAf3hrCsAZti3o]
 - Get a list of videos (video_ids) belonging to a particular industry (music, travel, finance etc)
 - Once passed, the code will: 
    - Pull the list of commenters on these videos
