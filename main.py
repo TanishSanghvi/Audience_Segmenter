@@ -14,12 +14,18 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import io
+import webbrowser
+from threading import Timer
 
 app = Flask(__name__)
 
 youtube=''
+
+def open_browser():
+      webbrowser.open_new('http://localhost:8080/')
+
 @app.route("/", methods =["GET", "POST"])
-def gfg():
+def connect():
     msg = None
     if request.method == "POST":
        global youtube
@@ -31,42 +37,33 @@ def gfg():
             youtube = youtube_auth.connect_google_api()
 
             #session['y'] = youtube
-            return redirect(url_for('fds'))
+            return redirect(url_for('run_hack'))
        except:
            msg = 'Incorrect Developer key' #add pop up
-           return redirect(url_for('gfg',msg = msg))
+           return redirect(url_for('connect',msg = msg))
 
     return render_template("form.html")
 
 final_df = pd.DataFrame()
 
 @app.route("/video", methods =["GET", "POST"])
-def fds():
+def run_hack():
     global final_df
     if request.method == "POST":
-        # video_id = request.form.get("videoids")
-        # videos_list = list(video_id.split())
-        # comments = YoutubeComments(youtube=youtube, videos_list=videos_list)
-        # comments_df = comments.get_comments()
-        # playlist = Playlists(youtube=youtube)
-        # playlist_df = playlist.pull_playlists(comments_df)
-        # videos_df = playlist.get_videos(playlist_df)
-        # tags = Tags(youtube=youtube)
-        # tags_df = tags.pull_tags(videos_df)
-        # final_df = tags.process(videos_df, playlist_df, tags_df)
-        # final_df.to_csv("tags.csv")
-
-        final_df = pd.read_csv("check.csv")
-        #time.sleep(10)
+        video_id = request.form.get("videoids")
+        videos_list = list(video_id.split())
+        comments = YoutubeComments(youtube=youtube, videos_list=videos_list)
+        comments_df = comments.get_comments()
+        playlist = Playlists(youtube=youtube)
+        playlist_df = playlist.pull_playlists(comments_df)
+        videos_df = playlist.get_videos(playlist_df)
+        tags = Tags(youtube=youtube)
+        tags_df = tags.pull_tags(videos_df)
+        final_df = tags.process(videos_df, playlist_df, tags_df)
         
         return redirect(url_for('mpl'))
     
     return render_template("video.html")
-
-# @app.route('/charts')
-# def plot():
-#  image_names = os.listdir('static')
-#  return render_template('charts.html', image_names = image_names)
 
 
 @app.route('/matplot', methods=("POST", "GET"))
@@ -129,4 +126,5 @@ def create_figure_2(clouds):
 
 
 if __name__ == "__main__":
-    app.run(host='localhost',port=8080,debug=True)
+    Timer(1, open_browser).start();
+    app.run(port=8080)
