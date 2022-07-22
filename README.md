@@ -6,7 +6,7 @@
 - Companies can profit from knowing their customer segments as they can then create contextualized advertisements or enhance their digital engagements based on the ‘taste’ of their users
 - In the following project we have created a blueprint of this process by utilizing YouTube data and it’s API which provides various metrics about a user such as their playlists, videos, commenters and so on
 - Post this, data processing, NLP processes (TF_IDF, N-grams) and clustering modules (K-means, Elbow Curves, Silhouette Scores) were applied to generate insightful wordclouds
-
+- The module was then converted to a web application, wherein, by simply passing a bunch of video ids, a user can have its audience segmented and represented using wordclouds
 
 ## BUILT WITH / MODULES USED
 
@@ -18,15 +18,22 @@ Built with Python 3.7. Modules used:
  - TF-IDF
  - Silhouette_Score
  - Elbow_Curve
+ - Flask
+ - YouTube API
+ - Matplotlib
 
 ## SUMMARIZED WORKFLOW
 
+- Enter a developer key from the following list to authenticate the YouTube API - ['AIzaSyAuo70sj6mxFGfpfKK-kj5vA4YPBwa7cZM', 'AIzaSyBz0rStW1NDfHjzyBKOCFud7RS0sfqEs04', 
+                         'AIzaSyBo1YHUZrL1Rt_KYvR6s1sTDqnX394Zd50', 'AIzaSyDIs7gvKx6NnqWUjXB8JfAf3hrCsAZti3o']
 - Get a list of videos (video_ids) belonging to a particular industry (music, travel, finance etc)
-- Pull the list of commenters on these videos
-- Pull the list of playlist ID’s belonging to these users
-- Pull the list of videos belonging to these playlists
-- Pull the ‘tags’ belonging to each video (YouTube has tags for each video)
-- Use NLP techniques to clean these tags followed by K-means in order to cluster the users based on their preferences (‘tags’)
+- Once passed, the code will: 
+ - Pull the list of commenters on these videos
+ - Pull the list of playlists belonging to these users
+ - Pull the list of videos belonging to these playlists
+ - Pull the ‘tags’ belonging to each video (YouTube has tags for each video)
+ - Use NLP techniques to clean these tags followed by K-means in order to cluster the users based on their preferences (‘tags’)
+ - Create worclouds for each clustered segment based on the 'tags'
 
 
 ## DETAILS AND RESULTS
