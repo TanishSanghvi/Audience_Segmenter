@@ -28,12 +28,12 @@ Built with Python 3.7. Modules used:
                          'AIzaSyBo1YHUZrL1Rt_KYvR6s1sTDqnX394Zd50', 'AIzaSyDIs7gvKx6NnqWUjXB8JfAf3hrCsAZti3o']
 - Get a list of videos (video_ids) belonging to a particular industry (music, travel, finance etc)
 - Once passed, the code will: 
- - Pull the list of commenters on these videos
- - Pull the list of playlists belonging to these users
- - Pull the list of videos belonging to these playlists
- - Pull the ‘tags’ belonging to each video (YouTube has tags for each video)
- - Use NLP techniques to clean these tags followed by K-means in order to cluster the users based on their preferences (‘tags’)
- - Create worclouds for each clustered segment based on the 'tags'
+   - Pull the list of commenters on these videos
+   - Pull the list of playlists belonging to these users
+   - Pull the list of videos belonging to these playlists
+   - Pull the ‘tags’ belonging to each video (YouTube has tags for each video)
+   - Use NLP techniques to clean these tags followed by K-means in order to cluster the users based on their preferences (‘tags’)
+   - Create worclouds for each clustered segment based on the 'tags'
 
 
 ## DETAILS AND RESULTS
