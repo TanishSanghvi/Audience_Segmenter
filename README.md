@@ -7,7 +7,7 @@
 - In the following project we have created a blueprint of this process by utilizing YouTube data and it’s API which provides various metrics about a user such as their playlists, videos, commenters and so on
 - Post this, data processing, NLP processes (TF_IDF, N-grams) and clustering modules (K-means, Elbow Curves, Silhouette Scores) were applied to generate insightful wordclouds
 - The module was then converted to a web application, wherein, by simply passing a bunch of video ids, a user can have its audience segmented and represented using wordclouds
-- ### [SEE VIDEO!] (https://youtu.be/xvyTAAIx8-U)
+- [###SEE VIDEO!] (https://youtu.be/xvyTAAIx8-U)
 
 ## BUILT WITH / MODULES USED
 
